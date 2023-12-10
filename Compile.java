@@ -49,6 +49,7 @@ public class Compile {
 
 				SyntaxAnalyser syn = new SyntaxAnalyser(fileName) ;
 				syn.parse( out ) ;
+				break;
 			} else System.out.println(fileName+" does not exist");
 		}
 
