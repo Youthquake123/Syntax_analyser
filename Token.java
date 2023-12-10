@@ -107,7 +107,7 @@ public class Token
 	public String toString()
 	{
 		String tt = "(" ;
-		tt += text + " " + symbol + ")";
+		tt += text + "，" + symbol + ")";
 		return tt ;
 	} // end of method toString
 } // end of class Token
