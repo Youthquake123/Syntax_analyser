@@ -128,8 +128,10 @@ public class Token_extract
 		} else {
 			current_token = currentLine.split(" ");
 			ct = current_token[2];
-			currentCharacter = ct.charAt(currentOffset);
-			currentOffset++;
+			if (currentOffset < ct.length()) {
+				currentCharacter = ct.charAt(currentOffset);
+				currentOffset++;
+			}
 		}
 	}
 //		if (currentLine == null)
