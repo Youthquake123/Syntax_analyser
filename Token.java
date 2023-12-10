@@ -106,7 +106,7 @@ public class Token
 	/** @see Object.toString */
 	public String toString()
 	{
-		String tt = "(token " + getName(symbol) ;
+		String tt = "(" + getName(symbol) ;
 		tt +=" " + text + " " + symbol + ")";
 		return tt ;
 	} // end of method toString
