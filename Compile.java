@@ -26,9 +26,8 @@ public class Compile {
 		String prefix = "Programs Folder" + File.separator + "program";
 		int fileNumber = -1;
 		int exitFlag = 0;
-		System.out.println( "312START" );
 		PrintStream out = null;
-		String outputFile = new String( "res.txt" );
+		String outputFile = new String( "output.txt" );
 		boolean goon = true;
 
 		try {
@@ -45,9 +44,11 @@ public class Compile {
 			goon = ((new File(fileName)).exists());
 			if( goon ) {
 				System.out.println();
-				System.out.println( "312FILE " + fileName );
 
 				SyntaxAnalyser syn = new SyntaxAnalyser(fileName) ;
+				System.setOut(out);
+				System.out.println( "312START" );
+				System.out.println( "312FILE " + fileName );
 				syn.parse( out ) ;
 				break;
 			} else System.out.println(fileName+" does not exist");
