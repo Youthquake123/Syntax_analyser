@@ -1,0 +1,229 @@
+RDPSTART
+RDPFILE test_right.txt
+RDPBEGIN StatementPart
+    RDPTOKEN begin
+    RDPBEGIN StatementList
+        RDPBEGIN Statement
+            RDPBEGIN ProcedureStatement
+                RDPTOKEN call
+                RDPTOKEN IDENTIFIER 'get'
+                RDPTOKEN (
+                RDPBEGIN ArgumentList
+                    RDPTOKEN IDENTIFIER 'x1'
+                RDPEND ArgumentList
+                RDPTOKEN )
+            RDPEND ProcedureStatement
+        RDPEND Statement
+        RDPTOKEN ;
+        RDPBEGIN StatementList
+            RDPBEGIN Statement
+                RDPBEGIN AssignmentStatement
+                    RDPTOKEN IDENTIFIER 'x2'
+                    RDPTOKEN :=
+                    RDPBEGIN Expression
+                        RDPBEGIN Term
+                            RDPBEGIN Factor
+                                RDPTOKEN NUMBER '1'
+                            RDPEND Factor
+                        RDPEND Term
+                    RDPEND Expression
+                RDPEND AssignmentStatement
+            RDPEND Statement
+            RDPTOKEN ;
+            RDPBEGIN StatementList
+                RDPBEGIN Statement
+                    RDPBEGIN AssignmentStatement
+                        RDPTOKEN IDENTIFIER 'x3'
+                        RDPTOKEN :=
+                        RDPBEGIN Expression
+                            RDPBEGIN Term
+                                RDPBEGIN Factor
+                                    RDPTOKEN NUMBER '0'
+                                RDPEND Factor
+                            RDPEND Term
+                        RDPEND Expression
+                    RDPEND AssignmentStatement
+                RDPEND Statement
+                RDPTOKEN ;
+                RDPBEGIN StatementList
+                    RDPBEGIN Statement
+                        RDPBEGIN WhileStatement
+                            RDPTOKEN while
+                            RDPBEGIN Condition
+                                RDPTOKEN IDENTIFIER 'x1'
+                                RDPBEGIN ConditionalOperator
+                                    RDPTOKEN /=
+                                RDPEND ConditionalOperator
+                                RDPTOKEN NUMBER '0'
+                            RDPEND Condition
+                            RDPTOKEN loop
+                            RDPBEGIN StatementList
+                                RDPBEGIN Statement
+                                    RDPBEGIN AssignmentStatement
+                                        RDPTOKEN IDENTIFIER 'x2'
+                                        RDPTOKEN :=
+                                        RDPBEGIN Expression
+                                            RDPBEGIN Term
+                                                RDPBEGIN Factor
+                                                    RDPTOKEN IDENTIFIER 'x2'
+                                                RDPEND Factor
+                                                RDPTOKEN *
+                                                RDPBEGIN Term
+                                                    RDPBEGIN Factor
+                                                        RDPTOKEN IDENTIFIER 'x1'
+                                                    RDPEND Factor
+                                                RDPEND Term
+                                            RDPEND Term
+                                        RDPEND Expression
+                                    RDPEND AssignmentStatement
+                                RDPEND Statement
+                                RDPTOKEN ;
+                                RDPBEGIN StatementList
+                                    RDPBEGIN Statement
+                                        RDPBEGIN AssignmentStatement
+                                            RDPTOKEN IDENTIFIER 'x1'
+                                            RDPTOKEN :=
+                                            RDPBEGIN Expression
+                                                RDPBEGIN Term
+                                                    RDPBEGIN Factor
+                                                        RDPTOKEN IDENTIFIER 'x1'
+                                                    RDPEND Factor
+                                                RDPEND Term
+                                                RDPTOKEN -
+                                                RDPBEGIN Expression
+                                                    RDPBEGIN Term
+                                                        RDPBEGIN Factor
+                                                            RDPTOKEN NUMBER '1'
+                                                        RDPEND Factor
+                                                    RDPEND Term
+                                                RDPEND Expression
+                                            RDPEND Expression
+                                        RDPEND AssignmentStatement
+                                    RDPEND Statement
+                                RDPEND StatementList
+                            RDPEND StatementList
+                            RDPTOKEN end
+                            RDPTOKEN loop
+                        RDPEND WhileStatement
+                    RDPEND Statement
+                    RDPTOKEN ;
+                    RDPBEGIN StatementList
+                        RDPBEGIN Statement
+                            RDPBEGIN ForStatement
+                                RDPTOKEN for
+                                RDPTOKEN (
+                                RDPBEGIN AssignmentStatement
+                                    RDPTOKEN IDENTIFIER 'x2'
+                                    RDPTOKEN :=
+                                    RDPBEGIN Expression
+                                        RDPBEGIN Term
+                                            RDPBEGIN Factor
+                                                RDPTOKEN NUMBER '1'
+                                            RDPEND Factor
+                                        RDPEND Term
+                                    RDPEND Expression
+                                RDPEND AssignmentStatement
+                                RDPTOKEN ;
+                                RDPBEGIN Condition
+                                    RDPTOKEN IDENTIFIER 'x2'
+                                    RDPBEGIN ConditionalOperator
+                                        RDPTOKEN <
+                                    RDPEND ConditionalOperator
+                                    RDPTOKEN IDENTIFIER 'x1'
+                                RDPEND Condition
+                                RDPTOKEN ;
+                                RDPBEGIN AssignmentStatement
+                                    RDPTOKEN IDENTIFIER 'x2'
+                                    RDPTOKEN :=
+                                    RDPBEGIN Expression
+                                        RDPBEGIN Term
+                                            RDPBEGIN Factor
+                                                RDPTOKEN IDENTIFIER 'x2'
+                                            RDPEND Factor
+                                        RDPEND Term
+                                        RDPTOKEN +
+                                        RDPBEGIN Expression
+                                            RDPBEGIN Term
+                                                RDPBEGIN Factor
+                                                    RDPTOKEN NUMBER '1'
+                                                RDPEND Factor
+                                            RDPEND Term
+                                        RDPEND Expression
+                                    RDPEND Expression
+                                RDPEND AssignmentStatement
+                                RDPTOKEN )
+                                RDPTOKEN do
+                                RDPBEGIN StatementList
+                                    RDPBEGIN Statement
+                                        RDPBEGIN ProcedureStatement
+                                            RDPTOKEN call
+                                            RDPTOKEN IDENTIFIER 'put'
+                                            RDPTOKEN (
+                                            RDPBEGIN ArgumentList
+                                                RDPTOKEN IDENTIFIER 'x1'
+                                                RDPTOKEN ,
+                                                RDPBEGIN ArgumentList
+                                                    RDPTOKEN IDENTIFIER 'x2'
+                                                    RDPTOKEN ,
+                                                    RDPBEGIN ArgumentList
+                                                        RDPTOKEN IDENTIFIER 'x3'
+                                                    RDPEND ArgumentList
+                                                RDPEND ArgumentList
+                                            RDPEND ArgumentList
+                                            RDPTOKEN )
+                                        RDPEND ProcedureStatement
+                                    RDPEND Statement
+                                    RDPTOKEN ;
+                                    RDPBEGIN StatementList
+                                        RDPBEGIN Statement
+                                            RDPBEGIN AssignmentStatement
+                                                RDPTOKEN IDENTIFIER 'x3'
+                                                RDPTOKEN :=
+                                                RDPBEGIN Expression
+                                                    RDPBEGIN Term
+                                                        RDPBEGIN Factor
+                                                            RDPTOKEN IDENTIFIER 'x3'
+                                                        RDPEND Factor
+                                                    RDPEND Term
+                                                    RDPTOKEN +
+                                                    RDPBEGIN Expression
+                                                        RDPBEGIN Term
+                                                            RDPBEGIN Factor
+                                                                RDPTOKEN IDENTIFIER 'x2'
+                                                            RDPEND Factor
+                                                        RDPEND Term
+                                                    RDPEND Expression
+                                                RDPEND Expression
+                                            RDPEND AssignmentStatement
+                                        RDPEND Statement
+                                    RDPEND StatementList
+                                RDPEND StatementList
+                                RDPTOKEN end
+                                RDPTOKEN loop
+                            RDPEND ForStatement
+                        RDPEND Statement
+                        RDPTOKEN ;
+                        RDPBEGIN StatementList
+                            RDPBEGIN Statement
+                                RDPBEGIN ProcedureStatement
+                                    RDPTOKEN call
+                                    RDPTOKEN IDENTIFIER 'put'
+                                    RDPTOKEN (
+                                    RDPBEGIN ArgumentList
+                                        RDPTOKEN IDENTIFIER 'x3'
+                                    RDPEND ArgumentList
+                                    RDPTOKEN )
+                                RDPEND ProcedureStatement
+                            RDPEND Statement
+                        RDPEND StatementList
+                    RDPEND StatementList
+                RDPEND StatementList
+            RDPEND StatementList
+        RDPEND StatementList
+    RDPEND StatementList
+    RDPTOKEN end
+RDPEND StatementPart
+RDPTOKEN EOF
+RDPSUCCESS
+
+RDPFINISH
