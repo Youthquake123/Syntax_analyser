@@ -1,12 +1,6 @@
 public abstract class AbstractGenerate
 {
 
-    /**
-    *
-    * insertTerminal
-    *
-    **/
-
     public void insertTerminal( Token token ) {
         String tt = Token.getName( token.symbol );
         
