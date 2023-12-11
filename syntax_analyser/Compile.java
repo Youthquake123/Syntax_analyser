@@ -23,10 +23,10 @@ public class Compile {
 
 		try {
 			if(choose==1){
-				fileName = "test.txt";
+				fileName = "test_right.txt";
 			}
 			if(choose==2){
-				fileName = "wrongTest.txt";
+				fileName = "test_wrong.txt";
 			}
 			out = new PrintStream( new FileOutputStream(outputFile) );
 		} catch( Exception e ) {
