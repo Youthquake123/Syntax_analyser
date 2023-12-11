@@ -8,7 +8,7 @@ public class Compile {
 	private static final String INDENT = "    "; // 4 spaces for indentation
 
 	private void run(String outputFile) throws IOException, CompilationException {
-		System.out.println("Please choose the input file, 1: Right test case, 2,3,4: Wrong input test");
+		System.out.println("Please choose the input file, 1: Correct test case, 2,3,4: Incorrect test case");
 		Scanner input =new Scanner(System.in);
 		int choose = input.nextInt();
 		PrintStream out = null;
