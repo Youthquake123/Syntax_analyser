@@ -5,12 +5,14 @@ import java.util.Stack;
 public class Compile {
 
 	public static String fileName;
+
 	private static final String INDENT = "    "; // 4 spaces for indentation
 
-	private void run(String outputFile) throws IOException, CompilationException {
+	private void run(String outputFile) throws IOException {
 		System.out.println("Please choose the input file, 1: Correct test case, 2,3,4: Incorrect test case");
 		Scanner input =new Scanner(System.in);
 		int choose = input.nextInt();
+		String flag = String.valueOf(choose);
 		PrintStream out = null;
 		boolean goon = true;
 
@@ -50,6 +52,14 @@ public class Compile {
 
 		out.flush();
 		out.close();
+
+		if (flag.matches("[1-4]")) {
+			String outputFilePath = "output_" + flag + ".txt";
+			convertToTree(outputFile, outputFilePath); // Convert to tree using the new file name
+
+		} else {
+			System.out.println("Invalid input. Please enter a number between 1 and 4.");
+		}
 	}
 
 	/**
@@ -94,13 +104,11 @@ public class Compile {
 		out.println(content.trim());
 	}
 
-	public static void main(String args[]) throws IOException, CompilationException {
+	public static void main(String[] args) throws IOException, CompilationException {
+		String outputFile = "output.txt";
 		Compile c = new Compile();
-		String outputFile = new String( "output1.txt" );
-		c.run(outputFile);
-		String outputFilePath = "output_3.txt";
-		convertToTree(outputFile, outputFilePath);
+		c.run(outputFile); // Use the output file name for the compilation process
 		File fileToDelete = new File(outputFile);
-		fileToDelete.delete();
+		fileToDelete.delete(); // Delete the temporary file
 	}
 }
