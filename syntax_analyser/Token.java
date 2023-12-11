@@ -120,12 +120,5 @@ public class Token
 		else
 			return names[i - 1] ;
 	}
-
-	public String toString()
-	{
-		String tt = "(" ;
-		tt += text + ", " + symbol + ")";
-		return tt ;
-	}
 }
 
