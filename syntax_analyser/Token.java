@@ -136,7 +136,8 @@ public class Token
 	/** @see Object.toString */
 	public String toString()
 	{
-		String tt = "(" + symbol + ", " + getName(symbol) + ")";
+		String tt = "(" ;
+		tt += text + ", " + symbol + ")";
 		return tt ;
 	} // end of method toString
 } // end of class Token
