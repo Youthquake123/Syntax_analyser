@@ -1,15 +1,3 @@
-
-/**
- *
- * Abstract Generate methods for 312 exercise.  This class provides an interface for arbitrary code generators to accept syntax from the rest of the system.
- * 
- * This class has been provided to students
- *
- * @Author: Roger Garside, John Mariani, John Vidler, Paul Rayson
- *
- *
- **/
-
 public abstract class AbstractGenerate
 {
 
@@ -25,7 +13,7 @@ public abstract class AbstractGenerate
         if( (token.symbol == Token.identifier) || (token.symbol == Token.numberConstant) || (token.symbol == Token.stringConstant) )
             tt += " '" + token.text + "'";
 
-        System.out.println( "312TOKEN " + tt );
+        System.out.println( "RDPTOKEN " + tt );
     } // end of method insertTerminal
 
     /**
@@ -35,7 +23,7 @@ public abstract class AbstractGenerate
     **/
 
     public void commenceNonterminal( String name ) {
-        System.out.println( "312BEGIN " + name );
+        System.out.println( "RDPBEGIN " + name );
     } // end of method commenceNonterminal
 
     /**
@@ -45,7 +33,7 @@ public abstract class AbstractGenerate
     **/
 
     public void finishNonterminal( String name ) {
-        System.out.println( "312END " + name );
+        System.out.println( "RDPEND " + name );
     } // end of method finishNonterminal
 
     /**
@@ -56,7 +44,7 @@ public abstract class AbstractGenerate
 
     public void reportSuccess()
     {
-        System.out.println( "312SUCCESS" );
+        System.out.println( "RDPSUCCESS" );
     } // end of method reportSuccess
 
 
