@@ -1,9 +1,0 @@
-RDPSTART
-RDPFILE test_wrong_1.txt
-RDPBEGIN StatementPart
-    Compilation Exception
-    Caused by  In test_wrong_1.txt: - Parsing error :  statement part
-    Caused by  In test_wrong_1.txt: - Expected token(s):  ' begin '  but found: (' begim ').
-    
-    
-    RDPFINISH
