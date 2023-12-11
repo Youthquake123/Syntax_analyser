@@ -39,7 +39,7 @@ public class Token_extract
 			// Handle the end of file or initial state appropriately
 			// For example, you might want to return a special end-of-file token
 			// or throw an exception if the file has not been read properly
-			return new Token(10, "EOF");}
+			return new Token(35, "EOF");}
 		current_token = currentLine.split(", ");
 		text = current_token[0].substring(1,current_token[0].length());
 		sy = current_token[1].substring(0,current_token[1].length() - 1);
