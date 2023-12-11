@@ -13,8 +13,8 @@ public class Compile {
 	 *
 	 **/
 
-	private void go(String outputFile) throws IOException {
-		System.out.println("Please choose the input file, 1: Right test case, 2: Wrong input test");
+	private void go(String outputFile) throws IOException, CompilationException {
+		System.out.println("Please choose the input file, 1: Right test case, 2,3,4: Wrong input test");
 		Scanner input =new Scanner(System.in);
 		int choose = input.nextInt();
 		PrintStream out = null;
@@ -26,7 +26,13 @@ public class Compile {
 				fileName = "test_right.txt";
 			}
 			if(choose==2){
-				fileName = "test_wrong.txt";
+				fileName = "test_wrong_1.txt";
+			}
+			if(choose==3) {
+				fileName = "test_wrong_2.txt";
+			}
+			if(choose==4) {
+				fileName = "test_wrong_3.txt";
 			}
 			out = new PrintStream( new FileOutputStream(outputFile) );
 		} catch( Exception e ) {
@@ -92,12 +98,12 @@ public class Compile {
 		out.println(content.trim());
 	}
 
-	public static void main(String args[]) throws IOException {
+	public static void main(String args[]) throws IOException, CompilationException {
 		Compile c = new Compile();
 
 		String outputFile = new String( "output1.txt" );
 		c.go(outputFile);
-		String outputFilePath = "output.txt";
+		String outputFilePath = "output_0.txt";
 		convertToTree(outputFile, outputFilePath);
 		File fileToDelete = new File(outputFile);
 		fileToDelete.delete();
