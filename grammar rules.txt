@@ -1,0 +1,19 @@
+<statementList>      		-> <statement> | <statementList> ; <statement>
+<statement>           		-> <assignmentStatement> | <ifStatement> | <whileStatement> | <procedureStatement> | <untilStatement> | <forStatement>
+<assignmentStatement> 		-> identifier := <assignmentStatement_remainder>
+<assignmentStatement_remainder> -> <expression> | stringConstant
+<ifStatement>        		-> if <condition> then <statementList> <if_remainder>
+<if_remainder>	     		-> end if | else <statementList> end if
+<whileStatement>     		-> while <condition> loop <statementList> end loop
+<procedureStatement> 		-> call identifier ( <argumentList> )
+<untilStatement>     		-> do <statementList> until <condition>
+<forStatement>       		-> for ( <assignmentStatement> ; <condition> ; <assignmentStatement> ) do <statementList> , identifier
+<argumentList>       		-> identifier | <argumentList> , identifier
+<condition>           		-> identifier <conditionalOperator> <condition_remainder>
+<condition_remainder> 		-> identifier | numberConstant | stringConstant
+<conditionalOperator> 		-> > | >= | = | /= | < | <=
+<expression>          		-> <term> | <expression> <expression_remainder>
+<expression_remainder> 		-> + <term> | - <term>
+<term>                		-> <factor> | <term> <term_remainder>
+<term_remainder>      		-> * <factor> | / <factor>
+<factor>              		-> identifier | numberConstant | ( <expression> )
